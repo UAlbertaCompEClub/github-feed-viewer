@@ -1,15 +1,16 @@
-var token = "c0a29d1039808ba12ba6600e355267c73449beb9";
-var commit_count = 10;
+var token = ""; //Add token here
+var commit_count = 9;
 var cur_commits = [];
 var new_commits = [];
-//newest date is a week ago
+//newest date is 30 days ago
 var newest_date = new Date();
-newest_date.setDate(newest_date.getDate() - 7);
+newest_date.setDate(newest_date.getDate() - 30);
 
 $(window).load(function(){
 	//github links go in here
 	var urls = [
-		"https://github.com/dudeofea/github-feed-viewer"
+		"https://github.com/dudeofea/github-feed-viewer",
+		"https://github.com/dudeofea/ratt-signal"
 	];
 	//remove github link and just leave /:author/:repo:
 	for (var i = 0; i < urls.length; i++) {
@@ -68,7 +69,7 @@ function update_commits(urls){
 			}
 		};
 		//cleanup
-		$('#commits > div:gt('+commit_count+')').remove();
+		$('#commits > div:gt('+(commit_count-1)+')').remove();
 		//update array
 		cur_commits = new_commits.concat(cur_commits);
 		cur_commits.slice(0, commit_count);
