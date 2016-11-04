@@ -220,6 +220,8 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock(id, endtime) {
+	var isActive = false;
+	var isLastHour = false;
 
   function updateClock() {
 
@@ -229,8 +231,26 @@ function initializeClock(id, endtime) {
 	$('.minutes').text(('0' + t.minutes).slice(-2));
 	$('.seconds').text(('0' + t.seconds).slice(-2));
 
-    if (t.total <= 0) {
+	if(t.days == 0 && !isActive){
+		isActive = true;
+		//Set timer to white
+		$('#countdown').css({
+			'color': '#fff',
+		});
+	}
+	else if(t.total <= 3600000 && !isLastHour){
+		isLastHour = true;
+		//Change to yellow
+		$('#countdown').css({
+			'color': '#FFA500',
+		});
+	}
+    else if (t.total <= 0) {
+		// Change to red
       clearInterval(timeinterval);
+	  $('#countdown').css({
+			'color': '#FF0000',
+		});
     }
   }
 
