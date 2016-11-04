@@ -200,3 +200,7 @@ html, body {
     transform: translateY(-75%);
     padding-right: 5%;
 }
+
+.countdown p{
+    display:inline;
+}

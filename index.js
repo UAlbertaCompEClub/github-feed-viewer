@@ -1,4 +1,4 @@
-var token = "44d78acd21261280479c21e600d8e99c87a1e68f"; //Add token here
+var token = gitToken.token; // Set up your token!
 var commit_count = 9;
 var cur_commits = [];
 var new_commits = [];
