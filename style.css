@@ -190,3 +190,13 @@ html, body {
   font-size: 14px;
   margin: 0.5em 1em 0.5em 1em;
 }
+
+.countdown{
+    float:right;
+    font-family: Arial;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    transform: translateY(-75%);
+    padding-right: 5%;
+}

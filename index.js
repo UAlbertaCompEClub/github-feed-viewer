@@ -1,4 +1,4 @@
-var token = ""; //Add token here
+var token = "44d78acd21261280479c21e600d8e99c87a1e68f"; //Add token here
 var commit_count = 9;
 var cur_commits = [];
 var new_commits = [];
@@ -19,7 +19,7 @@ $(window).load(function(){
 	update_commits(urls);
 	setInterval(function(){
 		update_commits(urls);
-	}, 20000);
+	}, 60000);
 });
 
 //get newest commits
@@ -201,3 +201,44 @@ function print_time(now, date){
 	//show days
 	return parseInt(hr/24)+"d "+parseInt(hr%24)+"h";
 }
+// Based off of: 
+// https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
+
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+
+  function updateClock() {
+
+    var t = getTimeRemaining(endtime);
+	$('.days').text(t.days);
+	$('.hours').text(('0' + t.hours).slice(-2));
+	$('.minutes').text(('0' + t.minutes).slice(-2));
+	$('.seconds').text(('0' + t.seconds).slice(-2));
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+//var deadline = 'November 4 2016 3:30:00 GMT-0600';
+var deadline = new Date(Date.parse(new Date()) + 24 * 60 * 60 * 1000);
+initializeClock("countdown", deadline);
+
