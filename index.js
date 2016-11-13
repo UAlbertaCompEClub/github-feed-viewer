@@ -18,6 +18,8 @@ $(window).load(function(){
 		"https://github.com/xrendan/ualbertaPrerequisiteExplorer",
 		"https://github.com/red-karpiak/10000Hours",
 		"https://github.com/janukan/hackED-2016-game",
+		"https://github.com/tymoorej/Running-man",
+		"https://github.com/CMPUT301F16T12/CloudyCar",
 	];
 	//remove github link and just leave /:author/:repo:
 	for (var i = 0; i < urls.length; i++) {
