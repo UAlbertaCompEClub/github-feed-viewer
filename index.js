@@ -9,17 +9,20 @@ newest_date.setDate(newest_date.getDate() - 3);
 $(window).load(function(){
 	//github links go in here
 	var urls = [
-		"https://github.com/AkashPatelUAlberta/SafeToday",
-		"https://github.com/fdrury/RiseAndShine",
-		"https://github.com/HarryPahwa/WakeUpCall",
-		"https://github.com/reboss/HackEd2016",
-		"https://github.com/happy96026/HeatMap",
-		"https://github.com/Spensaur-K/Allen-Spencer",
-		"https://github.com/xrendan/ualbertaPrerequisiteExplorer",
-		"https://github.com/red-karpiak/10000Hours",
-		"https://github.com/janukan/hackED-2016-game",
-		"https://github.com/tymoorej/Running-man",
-		"https://github.com/CMPUT301F16T12/CloudyCar",
+		"https://github.com/ishchow/alexa_chess",
+		"https://github.com/X01X012013/BatchImageProcessor",
+		"https://github.com/cujomalainey/noteable-wakeup",
+		"https://github.com/SpookyLobster/Break-Habit",
+		"https://github.com/DrDrei/HackerList",
+		"https://github.com/nwlieb/roomie",
+		"https://github.com/DanielTran3/HitOrMiss",
+		"https://github.com/cxiao/victoria",
+		"https://github.com/xrendan/events",
+		"https://github.com/Gknoblau/gladitude",
+		"https://github.com/Spensaur-K/Bloop",
+		"https://github.com/Cardinal-HackED2017/Cardinal-App",
+
+
 	];
 	//remove github link and just leave /:author/:repo:
 	for (var i = 0; i < urls.length; i++) {
