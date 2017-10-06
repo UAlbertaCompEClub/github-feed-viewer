@@ -7,20 +7,13 @@ var newest_date = new Date();
 newest_date.setDate(newest_date.getDate() - 3);
 
 $(window).load(function(){
-	//github links go in here
-	var urls = [
-		"https://github.com/AkashPatelUAlberta/SafeToday",
-		"https://github.com/fdrury/RiseAndShine",
-		"https://github.com/HarryPahwa/WakeUpCall",
-		"https://github.com/reboss/HackEd2016",
-		"https://github.com/happy96026/HeatMap",
-		"https://github.com/Spensaur-K/Allen-Spencer",
-		"https://github.com/xrendan/ualbertaPrerequisiteExplorer",
-		"https://github.com/red-karpiak/10000Hours",
-		"https://github.com/janukan/hackED-2016-game",
-		"https://github.com/tymoorej/Running-man",
-		"https://github.com/CMPUT301F16T12/CloudyCar",
-	];
+	// update header title
+	$('#event-title').text(config.title);
+	document.title = config.title;
+
+	// set up URLs
+	var urls = config.repos;
+
 	//remove github link and just leave /:author/:repo:
 	for (var i = 0; i < urls.length; i++) {
 		urls[i] = urls[i].substring(urls[i].indexOf("github.com/")+11);
@@ -267,7 +260,5 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = 'November 13 2016 12:00:00 GMT-0700';
-//var deadline = new Date(Date.parse(new Date()) + 24 * 60 * 60 * 1000);
-initializeClock("countdown", deadline);
+initializeClock("countdown", config.deadline);
 
