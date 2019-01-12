@@ -13,7 +13,7 @@ html, body {
 .header {
   height: 10%;
   width: 100%;
-  background: #1B440F;
+  background: #d02120;
 }
 
 .header img {
@@ -21,6 +21,9 @@ html, body {
   float: left;
   margin: auto;
   height: 100%;
+}
+.header .compelogo{
+	padding-left: 1vw;
 }
 .header h1 {
   margin: 0;
@@ -40,35 +43,11 @@ html, body {
   position: relative;
   box-shadow: inset 0px 1px rgba(0, 0, 0, 0.1);
 }
-.commit-list .commit-wrapper:nth-child(1) {
-  background-color: #204814;
-}
-.commit-list .commit-wrapper:nth-child(2) {
-  background-color: #254c19;
-}
-.commit-list .commit-wrapper:nth-child(3) {
-  background-color: #2a501f;
-}
-.commit-list .commit-wrapper:nth-child(4) {
-  background-color: #2f5424;
-}
-.commit-list .commit-wrapper:nth-child(5) {
-  background-color: #345929;
-}
-.commit-list .commit-wrapper:nth-child(6) {
-  background-color: #395d2e;
-}
-.commit-list .commit-wrapper:nth-child(7) {
-  background-color: #3e6134;
-}
-.commit-list .commit-wrapper:nth-child(8) {
-  background-color: #436539;
-}
-.commit-list .commit-wrapper:nth-child(9) {
-  background-color: #48693e;
+.commit-list .commit-wrapper {
+  background: linear-gradient(rgb(216, 43, 43), rgb(208, 33, 32), rgb(216, 43, 43));
 }
 .commit-list .commit-wrapper.selected .commit {
-  background-color: rgba(255, 255, 255, 0.95);
+	background-color: rgba(255, 255, 255, 0.95);
 }
 .commit-list .commit-wrapper.selected:after {
   content: "";
@@ -193,12 +172,12 @@ html, body {
 
 .countdown{
     float:right;
-    font-family: Arial;
+	font-family: 'Noto Sans', sans-serif;
     color: #FFF;
     text-align: center;
     font-size: 40px;
-    transform: translateY(-75%);
-    padding-right: 5%;
+	padding-right: 5%;
+	padding-top: 2.5vh;
 }
 
 .countdown p{
